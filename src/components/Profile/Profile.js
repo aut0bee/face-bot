@@ -12,7 +12,7 @@ class Profile extends Component {
   }
 
   onProfileUpdate = (data) => {
-    fetch(`https://fast-reef-61278.herokuapp.com/profile/${this.props.user.id}`, {
+    fetch(`https://stormy-island-71520.herokuapp.com/profile/${this.props.user.id}`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
          body: JSON.stringify({formInput: data}) 

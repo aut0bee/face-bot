@@ -50,7 +50,7 @@ class App extends Component {
   componentDidMount() {
     const token = window.sessionStorage.getItem('token');
     if (token) {
-      fetch('https://fast-reef-61278.herokuapp.com/signin', {
+      fetch('https://stormy-island-71520.herokuapp.com/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ class App extends Component {
         .then(response => response.json())
         .then(data => {
           if (data && data.id) {
-            fetch(`https://fast-reef-61278.herokuapp.com/profile/${data.id}`, {
+            fetch(`https://stormy-island-71520.herokuapp.com/profile/${data.id}`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://fast-reef-61278.herokuapp.com/imageurl', {
+      fetch('https://stormy-island-71520.herokuapp.com/imageurl', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://fast-reef-61278.herokuapp.com/image', {
+          fetch('https://stormy-island-71520.herokuapp.com/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json',
